@@ -11,4 +11,9 @@ describe("Test para StudentController", () => {
         const emailsStudents = StudentController.getEmailStudents(true);
         expect(emailsStudents).toContain("Sexton@visualpartnership.xyz");
     });
+
+    test("Obtener estudiantes con creditos mayores a 500", () => {
+        const amountCredits = StudentController.getCredits();
+        expect(amountCredits.length).toBe(27);
+    });
 });
