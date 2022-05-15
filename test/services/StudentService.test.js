@@ -12,4 +12,8 @@ describe("Test para ExplorerService", () => {
         expect(StudentService.getEmailsWithCertification(students, true).length).toBe(29);
     });
 
+    test("Recibir estudiantes con creditos mayores a 500", () => {
+        const students = Reader.readJsonFile("students.json");
+        expect(StudentService.getStudentsCredits(students).length).toBe(27);
+    });
 });
